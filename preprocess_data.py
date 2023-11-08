@@ -15,6 +15,7 @@ x_train=pad_sequences(train, padding='pre')
 label_encoder=LabelEncoder()
 y_train=label_encoder.fit_transform(data['Tags'])
 
+input_shape=x_train.shape[1]
 total_words=len(tokenizer.word_index)
 output_length=label_encoder.classes_.shape[0]
 
